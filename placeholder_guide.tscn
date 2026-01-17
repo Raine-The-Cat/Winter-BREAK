@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://huvwyi8om0qs"]
+
+[ext_resource type="Texture2D" uid="uid://cfbkmnwefsvdc" path="res://sprites/image.png" id="1_iy0fm"]
+[ext_resource type="PackedScene" uid="uid://xsxjx4f3g3j0" path="res://paddle.tscn" id="2_802g3"]
+[ext_resource type="PackedScene" uid="uid://dxqypauinhsir" path="res://wall.tscn" id="3_est07"]
+
+[node name="placeholder guide" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(319, 178)
+scale = Vector2(1.0901837, 1.0607959)
+texture = ExtResource("1_iy0fm")
+
+[node name="Paddle" parent="." instance=ExtResource("2_802g3")]
+position = Vector2(311, 263)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_est07")]
+position = Vector2(502, 163)
+rotation = 1.5707964
+scale = Vector2(5, 1)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_est07")]
+position = Vector2(309, 307)
+scale = Vector2(6, 1)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("3_est07")]
+position = Vector2(299, 12)
+scale = Vector2(6, 1)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("3_est07")]
+position = Vector2(122, 153)
+rotation = 1.5707964
+scale = Vector2(5, 1)
