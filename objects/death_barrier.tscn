@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bymdi7pambjjt"]
+
+[ext_resource type="Script" uid="uid://wqpcdqgmet1u" path="res://scripts/death_barrier.gd" id="1_cwbkm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ljrf7"]
+
+[node name="Death Barrier" type="Area2D"]
+script = ExtResource("1_cwbkm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ljrf7")
