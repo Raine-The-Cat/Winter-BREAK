@@ -18,15 +18,3 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	move_and_collide(velocity * delta)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	
-	#var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	#var input_dir := Input.get_axis("ui_left", "ui_right")
-	#var direction := (transform.origin * Vector2(input_dir.x, input_dir.y)).normalized()
-	#if input_dir:
-		#velocity.x = 5
-		#velocity.x = move_toward(velocity.x, SPEED, DRAG)
-	#else:
-		#velocity.x = move_toward(velocity.x, 0, DRAG)

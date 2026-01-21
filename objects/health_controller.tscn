@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://t7r02ng380ma"]
+
+[ext_resource type="Script" uid="uid://cr2uqqrq4c6uh" path="res://scripts/health_controller.gd" id="1_4b1xv"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4w0fe"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4b1xv"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8wiu6"]
+
+[node name="Health controller" type="Node2D"]
+script = ExtResource("1_4b1xv")
+
+[node name="Heart1" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+texture = SubResource("PlaceholderTexture2D_4w0fe")
+
+[node name="Heart2" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_4b1xv")
+
+[node name="Heart3" type="Sprite2D" parent="."]
+position = Vector2(-2, 0)
+texture = SubResource("PlaceholderTexture2D_8wiu6")

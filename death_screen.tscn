@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://nvcpx3ylaemb"]
+
+[ext_resource type="Script" uid="uid://b7gf7208v2rd5" path="res://death_screen.gd" id="1_ex68u"]
+[ext_resource type="Script" uid="uid://dmdqghytcjspq" path="res://death_screen_text.gd" id="1_if853"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7hb72"]
+
+[node name="Death screen" type="Node2D"]
+script = ExtResource("1_ex68u")
+
+[node name="Death screen art" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(640.00006, 360)
+texture = SubResource("PlaceholderTexture2D_7hb72")
+
+[node name="Death screen text" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_if853")

@@ -1,6 +1,7 @@
 extends Area2D
 
 @onready var ball = get_node("../Ball")
+var damage_timer = 0
 
 signal gutterball
 
@@ -10,9 +11,12 @@ func _ready() -> void:
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	#print(get_overlapping_areas().any(func(ball_check): return ball_check == "Ball"))
-	#print(get_overlapping_areas())
-	if overlaps_body(ball):
+func _process(_delta: float) -> void:
+	if overlaps_body(ball) and damage_timer <= 0:
 		print("yooooo")
 		gutterball.emit()
+		damage_timer = 10
+		
+	# I don't know why i had to do this, but if I didn't the fact the ball was in the death barrier would register SIX TIMES before it got reset
+	if damage_timer >= 0:
+		damage_timer -= 1

@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var paddle = get_node("%Paddle")
 var ball_distance = 20
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print(get_path())
@@ -20,6 +21,7 @@ func _input(press):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	# Keeps the ball above the paddle until fired
 	if in_play == false:
 		position = paddle.position
 		position.y -= ball_distance
@@ -27,11 +29,10 @@ func _physics_process(delta: float) -> void:
 	var collide := move_and_collide(velocity * delta)
 	
 	if collide:	
+		#the call bounces off walls, and if it bounces off the paddle, it bounces at a relative angle to the paddle
 		if collide.get_collider().name == "Paddle":
 			print("paddle")
 			velocity = Vector2(cos(get_angle_to(paddle.position)),sin(get_angle_to(paddle.position))) * -speed
-		elif collide.get_collider().name == "Death Barrier":
-			print("death barrier")
 		else: 
 			velocity = (velocity.bounce(collide.get_normal()))
 
