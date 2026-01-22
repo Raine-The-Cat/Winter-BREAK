@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://c5vhmop754rei" path="res://objects/ball.tscn" id="4_n4ci1"]
 [ext_resource type="PackedScene" uid="uid://bymdi7pambjjt" path="res://objects/death_barrier.tscn" id="5_errgl"]
 [ext_resource type="PackedScene" uid="uid://t7r02ng380ma" path="res://objects/health_controller.tscn" id="6_3igo1"]
-[ext_resource type="PackedScene" uid="uid://nvcpx3ylaemb" path="res://objects/death_screen.tscn" id="7_dniw8"]
-[ext_resource type="PackedScene" uid="uid://bff4k5t1oe1a6" path="res://objects/yuki.tscn" id="8_8p741"]
+[ext_resource type="PackedScene" uid="uid://davkbca2nsodc" path="res://objects/death_screen.tscn" id="7_dniw8"]
+[ext_resource type="PackedScene" uid="uid://ntkynsfo8m13" path="res://objects/yuki.tscn" id="8_8p741"]
 
 [node name="placeholder guide" type="Node2D"]
 
@@ -22,7 +22,7 @@ position = Vector2(311, 263)
 yuki_distance = 19
 
 [node name="Wall" parent="." instance=ExtResource("3_est07")]
-position = Vector2(353, 163.99998)
+position = Vector2(489, 165)
 rotation = 1.5707964
 scale = Vector2(5, 1)
 collision_mask = 3
@@ -33,12 +33,12 @@ scale = Vector2(6, 1)
 collision_mask = 3
 
 [node name="Wall3" parent="." instance=ExtResource("3_est07")]
-position = Vector2(309, 209)
+position = Vector2(305, 12)
 scale = Vector2(6, 1)
 collision_mask = 3
 
 [node name="Wall4" parent="." instance=ExtResource("3_est07")]
-position = Vector2(262, 156.99998)
+position = Vector2(115, 161.00002)
 rotation = 1.5707964
 scale = Vector2(5, 1)
 collision_mask = 3
