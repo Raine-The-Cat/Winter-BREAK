@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://huvwyi8om0qs"]
+[gd_scene load_steps=9 format=3 uid="uid://huvwyi8om0qs"]
 
 [ext_resource type="Texture2D" uid="uid://cfbkmnwefsvdc" path="res://sprites/image.png" id="1_iy0fm"]
 [ext_resource type="PackedScene" uid="uid://xsxjx4f3g3j0" path="res://objects/paddle.tscn" id="2_802g3"]
@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://c5vhmop754rei" path="res://objects/ball.tscn" id="4_n4ci1"]
 [ext_resource type="PackedScene" uid="uid://bymdi7pambjjt" path="res://objects/death_barrier.tscn" id="5_errgl"]
 [ext_resource type="PackedScene" uid="uid://t7r02ng380ma" path="res://objects/health_controller.tscn" id="6_3igo1"]
-[ext_resource type="PackedScene" uid="uid://nvcpx3ylaemb" path="res://death_screen.tscn" id="7_dniw8"]
+[ext_resource type="PackedScene" uid="uid://nvcpx3ylaemb" path="res://objects/death_screen.tscn" id="7_dniw8"]
+[ext_resource type="PackedScene" uid="uid://bff4k5t1oe1a6" path="res://objects/yuki.tscn" id="8_8p741"]
 
 [node name="placeholder guide" type="Node2D"]
 
@@ -18,30 +19,35 @@ texture = ExtResource("1_iy0fm")
 [node name="Paddle" parent="." instance=ExtResource("2_802g3")]
 unique_name_in_owner = true
 position = Vector2(311, 263)
+yuki_distance = 19
 
 [node name="Wall" parent="." instance=ExtResource("3_est07")]
-position = Vector2(498, 164)
+position = Vector2(353, 163.99998)
 rotation = 1.5707964
 scale = Vector2(5, 1)
+collision_mask = 3
 
 [node name="Wall2" parent="." instance=ExtResource("3_est07")]
 position = Vector2(309, 307)
 scale = Vector2(6, 1)
+collision_mask = 3
 
 [node name="Wall3" parent="." instance=ExtResource("3_est07")]
-position = Vector2(299, 12)
+position = Vector2(309, 209)
 scale = Vector2(6, 1)
+collision_mask = 3
 
 [node name="Wall4" parent="." instance=ExtResource("3_est07")]
-position = Vector2(112, 147.00002)
+position = Vector2(262, 156.99998)
 rotation = 1.5707964
 scale = Vector2(5, 1)
+collision_mask = 3
 
 [node name="Ball" parent="." instance=ExtResource("4_n4ci1")]
 position = Vector2(308, 195)
 
 [node name="Death Barrier" parent="." instance=ExtResource("5_errgl")]
-position = Vector2(306, 304)
+position = Vector2(306, 317)
 scale = Vector2(20, 1)
 
 [node name="wall" parent="." instance=ExtResource("3_est07")]
@@ -53,6 +59,12 @@ position = Vector2(410, 333)
 scale = Vector2(15, 15)
 
 [node name="Death screen" parent="." instance=ExtResource("7_dniw8")]
+visible = false
+
+[node name="Yuki" parent="." instance=ExtResource("8_8p741")]
+position = Vector2(312, 283)
+collision_layer = 2
+collision_mask = 2
 
 [connection signal="gutterball" from="Death Barrier" to="Ball" method="_on_death_barrier_gutterball"]
 [connection signal="gutterball" from="Death Barrier" to="Health controller" method="_on_death_barrier_gutterball"]

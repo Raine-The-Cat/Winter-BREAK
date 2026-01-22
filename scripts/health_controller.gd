@@ -25,10 +25,10 @@ func _process(delta: float) -> void:
 func _on_death_barrier_gutterball() -> void:
 	health -= 1
 	if health == 2:
-		heart_1.visible = false
+		heart_3.visible = false
 	elif health == 1:
 		heart_2.visible = false
 	elif health == 0:
-		heart_3.visible = false
+		heart_1.visible = false
 	elif health == -1:
 		player_lose.emit()

@@ -21,10 +21,6 @@ func _input(press):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	# Keeps the ball above the paddle until fired
-	if in_play == false:
-		position = paddle.position
-		position.y -= ball_distance
 
 	var collide := move_and_collide(velocity * delta)
 	
@@ -35,6 +31,12 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector2(cos(get_angle_to(paddle.position)),sin(get_angle_to(paddle.position))) * -speed
 		else: 
 			velocity = (velocity.bounce(collide.get_normal()))
+			
+func _process(_delta: float) -> void:
+		# Keeps the ball above the paddle until fired
+	if in_play == false:
+		position = paddle.position
+		position.y -= ball_distance
 
 
 func _on_death_barrier_gutterball() -> void:
