@@ -39,4 +39,11 @@ func _on_ball_brick_check() -> void:
 	await get_tree().create_timer(.01).timeout
 	print(get_tree().get_nodes_in_group("Bricks").size())
 	if get_tree().get_nodes_in_group("Bricks").size() == 0:
-		print("wniner winner chickkkkkkkdiner")
+		_level_win()
+		
+func _level_win():
+	print("wniner winner chickkkkkkkdiner")
+
+
+func _on_enemy_defeat() -> void:
+	_level_win()

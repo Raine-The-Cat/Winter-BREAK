@@ -80,3 +80,4 @@ position = Vector2(303, 55)
 [connection signal="gutterball" from="Death Barrier" to="Ball" method="_on_death_barrier_gutterball"]
 [connection signal="gutterball" from="Death Barrier" to="State controller" method="_on_death_barrier_gutterball"]
 [connection signal="player_lose" from="State controller" to="Death screen" method="_on_health_controller_player_lose"]
+[connection signal="defeat" from="Enemy" to="State controller" method="_on_enemy_defeat"]

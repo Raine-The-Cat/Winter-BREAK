@@ -27,15 +27,17 @@ func _physics_process(delta: float) -> void:
 	var collide := move_and_collide(velocity * delta)
 	
 	if collide:	
-		#the call bounces off walls, and if it bounces off the paddle, it bounces at a relative angle to the paddle
+		#the ball bounces off walls, and if it bounces off the paddle, it bounces at a relative angle to the paddle
 		if collide.get_collider().name == "Paddle":
 			print("paddle")
 			velocity = Vector2(cos(get_angle_to(paddle.position)),sin(get_angle_to(paddle.position))) * -speed
 		elif collide.get_collider().is_in_group("Bricks"):
 			collide.get_collider().call("_break")
+			velocity = (velocity.bounce(collide.get_normal()))
 			brick_check.emit()
 		elif collide.get_collider().is_in_group("Enemy"):
 			collide.get_collider().call("damage")
+			velocity = (velocity.bounce(collide.get_normal()))
 		else: 
 			velocity = (velocity.bounce(collide.get_normal()))
 			

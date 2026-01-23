@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dlm251eufw3ba" path="res://sprites/Rival 1.png" id="1_7k104"]
 [ext_resource type="Script" uid="uid://det0t3xv7o35g" path="res://objects/enemy.gd" id="1_41oev"]
-[ext_resource type="Texture2D" uid="uid://ct6s06cp7bkkx" path="res://sprites/h3.png" id="2_7jlpp"]
+[ext_resource type="Texture2D" uid="uid://cln38pp5stg4c" path="res://sprites/rival heart 1.png" id="3_41oev"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gyqm"]
 radius = 11.0
@@ -20,13 +20,13 @@ texture = ExtResource("1_7k104")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Heart 1" type="Sprite2D" parent="Node2D"]
-position = Vector2(-10, -21)
-texture = ExtResource("2_7jlpp")
+position = Vector2(-14, -21)
+texture = ExtResource("3_41oev")
 
 [node name="Heart 2" type="Sprite2D" parent="Node2D"]
-position = Vector2(0, -21)
-texture = ExtResource("2_7jlpp")
+position = Vector2(0, -25)
+texture = ExtResource("3_41oev")
 
 [node name="Heart 3" type="Sprite2D" parent="Node2D"]
-position = Vector2(10, -21)
-texture = ExtResource("2_7jlpp")
+position = Vector2(14, -21)
+texture = ExtResource("3_41oev")
