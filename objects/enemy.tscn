@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbnwt3wop782o"]
+
+[ext_resource type="Texture2D" uid="uid://dlm251eufw3ba" path="res://sprites/Rival 1.png" id="1_7k104"]
+[ext_resource type="Script" uid="uid://det0t3xv7o35g" path="res://objects/enemy.gd" id="1_41oev"]
+[ext_resource type="Texture2D" uid="uid://ct6s06cp7bkkx" path="res://sprites/h3.png" id="2_7jlpp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gyqm"]
+radius = 11.0
+
+[node name="Enemy" type="StaticBody2D" groups=["Enemy"]]
+script = ExtResource("1_41oev")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7k104")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Heart 1" type="Sprite2D" parent="Node2D"]
+position = Vector2(-10, -21)
+texture = ExtResource("2_7jlpp")
+
+[node name="Heart 2" type="Sprite2D" parent="Node2D"]
+position = Vector2(0, -21)
+texture = ExtResource("2_7jlpp")
+
+[node name="Heart 3" type="Sprite2D" parent="Node2D"]
+position = Vector2(10, -21)
+texture = ExtResource("2_7jlpp")

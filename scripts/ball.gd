@@ -6,6 +6,8 @@ extends CharacterBody2D
 @onready var paddle = get_node("%Paddle")
 var ball_distance = 20
 
+signal brick_check
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,8 +31,15 @@ func _physics_process(delta: float) -> void:
 		if collide.get_collider().name == "Paddle":
 			print("paddle")
 			velocity = Vector2(cos(get_angle_to(paddle.position)),sin(get_angle_to(paddle.position))) * -speed
+		elif collide.get_collider().is_in_group("Bricks"):
+			collide.get_collider().call("_break")
+			brick_check.emit()
+		elif collide.get_collider().is_in_group("Enemy"):
+			collide.get_collider().call("damage")
 		else: 
 			velocity = (velocity.bounce(collide.get_normal()))
+			
+				
 			
 func _process(_delta: float) -> void:
 		# Keeps the ball above the paddle until fired

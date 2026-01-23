@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://huvwyi8om0qs"]
+[gd_scene load_steps=11 format=3 uid="uid://huvwyi8om0qs"]
 
 [ext_resource type="Texture2D" uid="uid://cfbkmnwefsvdc" path="res://sprites/image.png" id="1_iy0fm"]
 [ext_resource type="PackedScene" uid="uid://xsxjx4f3g3j0" path="res://objects/paddle.tscn" id="2_802g3"]
 [ext_resource type="PackedScene" uid="uid://dxqypauinhsir" path="res://objects/wall.tscn" id="3_est07"]
 [ext_resource type="PackedScene" uid="uid://c5vhmop754rei" path="res://objects/ball.tscn" id="4_n4ci1"]
 [ext_resource type="PackedScene" uid="uid://bymdi7pambjjt" path="res://objects/death_barrier.tscn" id="5_errgl"]
-[ext_resource type="PackedScene" uid="uid://t7r02ng380ma" path="res://objects/health_controller.tscn" id="6_3igo1"]
-[ext_resource type="PackedScene" uid="uid://davkbca2nsodc" path="res://objects/death_screen.tscn" id="7_dniw8"]
-[ext_resource type="PackedScene" uid="uid://ntkynsfo8m13" path="res://objects/yuki.tscn" id="8_8p741"]
+[ext_resource type="PackedScene" uid="uid://t7r02ng380ma" path="res://objects/state_controller.tscn" id="6_3igo1"]
+[ext_resource type="PackedScene" path="res://objects/death_screen.tscn" id="7_dniw8"]
+[ext_resource type="PackedScene" path="res://objects/yuki.tscn" id="8_8p741"]
+[ext_resource type="PackedScene" uid="uid://c421yoo78jf2u" path="res://objects/bricks/basic_brick.tscn" id="9_s7cmc"]
+[ext_resource type="PackedScene" uid="uid://dbnwt3wop782o" path="res://objects/enemy.tscn" id="10_8s3r2"]
 
 [node name="placeholder guide" type="Node2D"]
 
@@ -54,9 +56,8 @@ scale = Vector2(20, 1)
 position = Vector2(691, 116)
 scale = Vector2(5, 1)
 
-[node name="Health controller" parent="." instance=ExtResource("6_3igo1")]
+[node name="State controller" parent="." instance=ExtResource("6_3igo1")]
 position = Vector2(410, 333)
-scale = Vector2(15, 15)
 
 [node name="Death screen" parent="." instance=ExtResource("7_dniw8")]
 visible = false
@@ -66,6 +67,16 @@ position = Vector2(312, 283)
 collision_layer = 2
 collision_mask = 2
 
+[node name="Basic Brick" parent="." instance=ExtResource("9_s7cmc")]
+position = Vector2(263, 102)
+
+[node name="Basic Brick2" parent="." instance=ExtResource("9_s7cmc")]
+position = Vector2(334, 102)
+
+[node name="Enemy" parent="." instance=ExtResource("10_8s3r2")]
+position = Vector2(303, 55)
+
+[connection signal="brick_check" from="Ball" to="State controller" method="_on_ball_brick_check"]
 [connection signal="gutterball" from="Death Barrier" to="Ball" method="_on_death_barrier_gutterball"]
-[connection signal="gutterball" from="Death Barrier" to="Health controller" method="_on_death_barrier_gutterball"]
-[connection signal="player_lose" from="Health controller" to="Death screen" method="_on_health_controller_player_lose"]
+[connection signal="gutterball" from="Death Barrier" to="State controller" method="_on_death_barrier_gutterball"]
+[connection signal="player_lose" from="State controller" to="Death screen" method="_on_health_controller_player_lose"]

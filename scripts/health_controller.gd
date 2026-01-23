@@ -32,3 +32,11 @@ func _on_death_barrier_gutterball() -> void:
 		heart_1.visible = false
 	elif health == -1:
 		player_lose.emit()
+
+
+func _on_ball_brick_check() -> void:
+	# This wait is dumb as heck but for some reason this code fires off first if i dont do this, meaning it counts before the brick is destroyed
+	await get_tree().create_timer(.01).timeout
+	print(get_tree().get_nodes_in_group("Bricks").size())
+	if get_tree().get_nodes_in_group("Bricks").size() == 0:
+		print("wniner winner chickkkkkkkdiner")
