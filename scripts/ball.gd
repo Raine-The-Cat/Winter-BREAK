@@ -38,6 +38,7 @@ func _physics_process(delta: float) -> void:
 		elif collide.get_collider().is_in_group("Enemy"):
 			collide.get_collider().call("damage")
 			velocity = (velocity.bounce(collide.get_normal()))
+			in_play = false
 		else: 
 			velocity = (velocity.bounce(collide.get_normal()))
 			

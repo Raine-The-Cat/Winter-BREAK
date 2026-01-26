@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://r0tocdh2rlmr"]
+
+[ext_resource type="PackedScene" uid="uid://dr8fro31sjmi5" path="res://objects/vn parts/DialoguePopup.tscn" id="1_dnv3a"]
+
+[node name="Dialogue container" instance=ExtResource("1_dnv3a")]

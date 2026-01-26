@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://di636fl8cqmid"]
+
+[ext_resource type="PackedScene" uid="uid://dpehi7n3rench" path="res://objects/vn parts/talksprite_base.tscn" id="1_lm5st"]
+
+[node name="Talksprite Yuki" instance=ExtResource("1_lm5st")]

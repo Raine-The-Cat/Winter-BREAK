@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqlgtaabi51fy"]
+
+[ext_resource type="Script" uid="uid://du6ddxhnxhfl5" path="res://scripts/visual_novel_base.gd" id="1_fpv1p"]
+
+[node name="Conversation Base" type="ReferenceRect" groups=["Conversation"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fpv1p")
+
+[node name="Left" type="ReferenceRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 113.0
+offset_right = 153.0
+offset_bottom = 40.0
+
+[node name="Right" type="ReferenceRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 483.0
+offset_right = 523.0
+offset_bottom = 40.0
+
+[node name="Off_Right" type="ReferenceRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 784.0
+offset_right = 824.0
+offset_bottom = 40.0

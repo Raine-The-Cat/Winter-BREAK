@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3uajhi06fbew"]
+
+[ext_resource type="PackedScene" uid="uid://dr8fro31sjmi5" path="res://objects/vn parts/DialoguePopup.tscn" id="1_i6wcd"]
+[ext_resource type="Texture2D" uid="uid://c5uh6gne358hy" path="res://sprites/rival_talksprite_placeholder.png" id="2_whhr6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whhr6"]
+bg_color = Color(0.28235295, 0.25490198, 0.25490198, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vidu"]
+bg_color = Color(0.8901961, 0.46666667, 0.40392157, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 0.6901961, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_167sa"]
+bg_color = Color(0.28235295, 0.25490198, 0.25490198, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.7882353, 0.36862746, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[node name="Dialogue container" instance=ExtResource("1_i6wcd")]
+theme_override_styles/panel = SubResource("StyleBoxFlat_whhr6")
+
+[node name="PanelContainer" parent="." index="0"]
+theme_override_styles/panel = SubResource("StyleBoxFlat_3vidu")
+
+[node name="Panel" parent="." index="1"]
+offset_left = 360.0
+offset_right = 450.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_167sa")
+
+[node name="Name" parent="Panel" index="0"]
+text = "Rival"
+
+[node name="RivalTalkspritePlaceholder" type="Sprite2D" parent="." index="2"]
+position = Vector2(-35, -86)
+texture = ExtResource("2_whhr6")

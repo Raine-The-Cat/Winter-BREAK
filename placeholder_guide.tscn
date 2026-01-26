@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://huvwyi8om0qs"]
+[gd_scene load_steps=12 format=3 uid="uid://huvwyi8om0qs"]
 
 [ext_resource type="Texture2D" uid="uid://cfbkmnwefsvdc" path="res://sprites/image.png" id="1_iy0fm"]
 [ext_resource type="PackedScene" uid="uid://xsxjx4f3g3j0" path="res://objects/paddle.tscn" id="2_802g3"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" path="res://objects/yuki.tscn" id="8_8p741"]
 [ext_resource type="PackedScene" uid="uid://c421yoo78jf2u" path="res://objects/bricks/basic_brick.tscn" id="9_s7cmc"]
 [ext_resource type="PackedScene" uid="uid://dbnwt3wop782o" path="res://objects/enemy.tscn" id="10_8s3r2"]
+[ext_resource type="Texture2D" uid="uid://cawyfb35cgafr" path="res://sprites/Game_Mockup.png" id="11_wubcf"]
 
 [node name="placeholder guide" type="Node2D"]
 
@@ -49,18 +50,15 @@ collision_mask = 3
 position = Vector2(308, 195)
 
 [node name="Death Barrier" parent="." instance=ExtResource("5_errgl")]
-position = Vector2(306, 317)
+position = Vector2(306, 309)
 scale = Vector2(20, 1)
-
-[node name="wall" parent="." instance=ExtResource("3_est07")]
-position = Vector2(691, 116)
-scale = Vector2(5, 1)
-
-[node name="State controller" parent="." instance=ExtResource("6_3igo1")]
-position = Vector2(410, 333)
 
 [node name="Death screen" parent="." instance=ExtResource("7_dniw8")]
 visible = false
+z_index = 1
+
+[node name="State controller" parent="." instance=ExtResource("6_3igo1")]
+position = Vector2(410, 333)
 
 [node name="Yuki" parent="." instance=ExtResource("8_8p741")]
 position = Vector2(312, 283)
@@ -75,6 +73,11 @@ position = Vector2(334, 102)
 
 [node name="Enemy" parent="." instance=ExtResource("10_8s3r2")]
 position = Vector2(303, 55)
+
+[node name="GameMockup" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320, 180)
+texture = ExtResource("11_wubcf")
 
 [connection signal="brick_check" from="Ball" to="State controller" method="_on_ball_brick_check"]
 [connection signal="gutterball" from="Death Barrier" to="Ball" method="_on_death_barrier_gutterball"]
