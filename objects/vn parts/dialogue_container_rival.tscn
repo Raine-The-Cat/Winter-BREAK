@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3uajhi06fbew"]
+[gd_scene load_steps=5 format=3 uid="uid://c3uajhi06fbew"]
 
 [ext_resource type="PackedScene" uid="uid://dr8fro31sjmi5" path="res://objects/vn parts/DialoguePopup.tscn" id="1_i6wcd"]
-[ext_resource type="Texture2D" uid="uid://c5uh6gne358hy" path="res://sprites/rival_talksprite_placeholder.png" id="2_whhr6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_whhr6"]
 bg_color = Color(0.28235295, 0.25490198, 0.25490198, 1)
@@ -52,7 +51,3 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_167sa")
 
 [node name="Name" parent="Panel" index="0"]
 text = "Rival"
-
-[node name="RivalTalkspritePlaceholder" type="Sprite2D" parent="." index="2"]
-position = Vector2(-35, -86)
-texture = ExtResource("2_whhr6")

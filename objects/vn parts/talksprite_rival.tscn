@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://chgjceg6klbd0"]
+[gd_scene load_steps=4 format=3 uid="uid://chgjceg6klbd0"]
 
 [ext_resource type="PackedScene" uid="uid://dpehi7n3rench" path="res://objects/vn parts/talksprite_base.tscn" id="1_kxclf"]
 [ext_resource type="Texture2D" uid="uid://c5uh6gne358hy" path="res://sprites/rival_talksprite_placeholder.png" id="2_f37vc"]
+[ext_resource type="PackedScene" uid="uid://c3uajhi06fbew" path="res://objects/vn parts/dialogue_container_rival.tscn" id="2_rf3k4"]
 
 [node name="Talksprite_Rival" instance=ExtResource("1_kxclf")]
+dialogue_box = ExtResource("2_rf3k4")
 default_sprite = ExtResource("2_f37vc")

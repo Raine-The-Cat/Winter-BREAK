@@ -45,6 +45,8 @@ layout_mode = 2
 accessibility_name = "DialogueBox"
 text = "If this shows up something is wrong"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="PanelContainer/DialogueBox"]
+
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
 offset_left = -39.0
