@@ -31,16 +31,20 @@ func _physics_process(delta: float) -> void:
 		if collide.get_collider().name == "Paddle":
 			print("paddle")
 			velocity = Vector2(cos(get_angle_to(paddle.position)),sin(get_angle_to(paddle.position))) * -speed
+		#if the ball hits a brick, it runs the brick's break function and checks how many bricks are left
 		elif collide.get_collider().is_in_group("Bricks"):
 			collide.get_collider().call("_break")
 			velocity = (velocity.bounce(collide.get_normal()))
 			brick_check.emit()
+		#if the ball hits the enemy, it breaks and deals damage
 		elif collide.get_collider().is_in_group("Enemy"):
 			collide.get_collider().call("damage")
 			velocity = (velocity.bounce(collide.get_normal()))
 			in_play = false
+		#balls to the walls
 		else: 
 			velocity = (velocity.bounce(collide.get_normal()))
+			get_node("AudioStreamPlayer2D").play()
 			
 				
 			
