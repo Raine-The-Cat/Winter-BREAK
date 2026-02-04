@@ -17,13 +17,21 @@ func damage():
 	health -= 1
 	if health == 2:
 		$"Node2D/Heart 1".texture = load("res://sprites/rival heart 2.png")
-		get_node("AudioStreamPlayer2D").play()
+
 	elif health == 1:
 		$"Node2D/Heart 2".texture = load("res://sprites/rival heart 2.png")
-		get_node("AudioStreamPlayer2D").play()
+
 	elif health == 0:
 		$"Node2D/Heart 3".texture = load("res://sprites/rival heart 2.png")
-		get_node("AudioStreamPlayer2D").play()
+		$Sprite2D.pause()
+		defeat.emit()
+
 	elif health <= -1:
 		defeat.emit()
-	
+		
+	get_node("AudioStreamPlayer2D").play()
+	$Sprite2D.pause()
+	$Sprite2D.modulate = Color(1,.5,.5)
+	await get_tree().create_timer(.2).timeout
+	$Sprite2D.play()
+	$Sprite2D.modulate = Color(1,1,1)

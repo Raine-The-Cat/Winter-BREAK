@@ -32,8 +32,9 @@ func _physics_process(delta: float) -> void:
 		#the ball bounces off walls, and if it bounces off the paddle, it bounces at a relative angle to the paddle
 		if collide.get_collider().name == "Paddle":
 			print("paddle")
-			get_node("Paddle_Audio").play()
 			velocity = Vector2(cos(get_angle_to(paddle.position)),sin(get_angle_to(paddle.position))) * -speed
+			if get_node("Paddle_Audio").is_playing() == false:
+				get_node("Paddle_Audio").play()
 		#if the ball hits a brick, it runs the brick's break function and checks how many bricks are left
 		elif collide.get_collider().is_in_group("Bricks"):
 			collide.get_collider().call("_break")

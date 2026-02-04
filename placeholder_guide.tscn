@@ -48,7 +48,7 @@ scale = Vector2(5, 1)
 collision_mask = 3
 
 [node name="Ball" parent="." instance=ExtResource("4_n4ci1")]
-position = Vector2(308, 195)
+position = Vector2(311, 244)
 
 [node name="Death Barrier" parent="." instance=ExtResource("5_errgl")]
 position = Vector2(306, 309)
@@ -66,22 +66,66 @@ position = Vector2(312, 283)
 collision_layer = 2
 collision_mask = 2
 
-[node name="Basic Brick" parent="." instance=ExtResource("9_s7cmc")]
-position = Vector2(263, 102)
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(255, 88)
 
-[node name="Basic Brick2" parent="." instance=ExtResource("9_s7cmc")]
-position = Vector2(334, 102)
+[node name="Basic Brick" parent="Node2D" instance=ExtResource("9_s7cmc")]
+
+[node name="Basic Brick2" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(93, 0)
+
+[node name="Tough Brick" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(48, 0)
+
+[node name="Tough Brick2" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(27, 23)
+
+[node name="Tough Brick3" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(76, 23)
+
+[node name="Basic Brick3" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(123, 23)
+
+[node name="Basic Brick4" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-24, 23)
+
+[node name="Basic Brick5" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(136, 0)
+
+[node name="Tough Brick4" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(49, 45)
+
+[node name="Tough Brick5" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(49, 94)
 
 [node name="Enemy" parent="." instance=ExtResource("10_8s3r2")]
-position = Vector2(303, 55)
+position = Vector2(303, 50)
 
 [node name="GameMockup" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(320, 180)
 texture = ExtResource("11_wubcf")
 
-[node name="Tough Brick" parent="." instance=ExtResource("12_rxby0")]
-position = Vector2(300, 126)
+[node name="Basic Brick" parent="." instance=ExtResource("9_s7cmc")]
+position = Vector2(210, 88)
+
+[node name="Basic Brick2" parent="." instance=ExtResource("9_s7cmc")]
+position = Vector2(163, 87)
+
+[node name="Basic Brick3" parent="." instance=ExtResource("9_s7cmc")]
+position = Vector2(437, 88)
+
+[node name="Basic Brick4" parent="." instance=ExtResource("9_s7cmc")]
+position = Vector2(187, 111)
+
+[node name="Basic Brick5" parent="." instance=ExtResource("9_s7cmc")]
+position = Vector2(141, 111)
+
+[node name="Basic Brick6" parent="." instance=ExtResource("9_s7cmc")]
+position = Vector2(420, 111)
+
+[node name="Basic Brick7" parent="." instance=ExtResource("9_s7cmc")]
+position = Vector2(463, 111)
 
 [connection signal="brick_check" from="Ball" to="State controller" method="_on_ball_brick_check"]
 [connection signal="gutterball" from="Death Barrier" to="Ball" method="_on_death_barrier_gutterball"]
