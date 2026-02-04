@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dbnwt3wop782o"]
+[gd_scene load_steps=15 format=3 uid="uid://dbnwt3wop782o"]
 
 [ext_resource type="Script" uid="uid://det0t3xv7o35g" path="res://scripts/enemy.gd" id="1_41oev"]
 [ext_resource type="Texture2D" uid="uid://dyb81ktfpdabo" path="res://sprites/Rival/r1.png" id="2_dkbxi"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b1hvwhl0s771a" path="res://sprites/Rival/r7.png" id="8_el3yj"]
 [ext_resource type="Texture2D" uid="uid://ciw8qjjgp7a3l" path="res://sprites/Rival/r8.png" id="9_oigae"]
 [ext_resource type="AudioStream" uid="uid://blne2sq43ach7" path="res://sfx/Porcupine_death_fall.wav.ogg" id="11_gusmx"]
+[ext_resource type="AudioStream" uid="uid://catda7fsvv8ha" path="res://sfx/Nail_beast_death.wav.ogg" id="12_n7us5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gyqm"]
 radius = 11.0
@@ -72,6 +73,11 @@ texture = ExtResource("3_41oev")
 position = Vector2(14, -21)
 texture = ExtResource("3_41oev")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Hit noise" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_gusmx")
 volume_db = 7.068
+
+[node name="Death noise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_n7us5")
+volume_db = -12.117
+pitch_scale = 1.62

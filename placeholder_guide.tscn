@@ -75,13 +75,13 @@ position = Vector2(255, 88)
 position = Vector2(93, 0)
 
 [node name="Tough Brick" parent="Node2D" instance=ExtResource("12_rxby0")]
-position = Vector2(48, 0)
+position = Vector2(107, 71)
 
 [node name="Tough Brick2" parent="Node2D" instance=ExtResource("12_rxby0")]
-position = Vector2(27, 23)
+position = Vector2(0, 45)
 
 [node name="Tough Brick3" parent="Node2D" instance=ExtResource("12_rxby0")]
-position = Vector2(76, 23)
+position = Vector2(107, 46)
 
 [node name="Basic Brick3" parent="Node2D" instance=ExtResource("9_s7cmc")]
 position = Vector2(123, 23)
@@ -93,10 +93,10 @@ position = Vector2(-24, 23)
 position = Vector2(136, 0)
 
 [node name="Tough Brick4" parent="Node2D" instance=ExtResource("12_rxby0")]
-position = Vector2(49, 45)
+position = Vector2(106, 96)
 
 [node name="Tough Brick5" parent="Node2D" instance=ExtResource("12_rxby0")]
-position = Vector2(49, 94)
+position = Vector2(-1, 97)
 
 [node name="Enemy" parent="." instance=ExtResource("10_8s3r2")]
 position = Vector2(303, 50)
