@@ -16,6 +16,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fpv1p")
 
+[node name="Off_Left" type="ReferenceRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Left" type="ReferenceRect" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
@@ -37,7 +43,7 @@ offset_left = 784.0
 offset_right = 824.0
 offset_bottom = 40.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Gradient" type="Sprite2D" parent="."]
 position = Vector2(321.34732, 181.43623)
 rotation = -1.5707964
 scale = Vector2(1.4270458, 639.4625)

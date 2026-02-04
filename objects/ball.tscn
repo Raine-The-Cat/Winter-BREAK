@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5vhmop754rei"]
+[gd_scene load_steps=8 format=3 uid="uid://c5vhmop754rei"]
 
 [ext_resource type="Script" uid="uid://dbxfwyhng4m1a" path="res://scripts/ball.gd" id="1_x8fbi"]
-[ext_resource type="AudioStream" uid="uid://cv1o8a63ldtqb" path="res://sfx/Croak_(1).wav.ogg" id="2_n16w4"]
+[ext_resource type="AudioStream" uid="uid://d1kshi0cfhsm" path="res://sfx/Mining_(1).wav" id="2_n16w4"]
+[ext_resource type="AudioStream" uid="uid://ctkmi0lgncgj3" path="res://sfx/Salamander_attack_(magic).wav.ogg" id="3_3d6a7"]
+[ext_resource type="Script" uid="uid://hach2vo4qg6t" path="res://scripts/wall_audio.gd" id="3_wfynf"]
+[ext_resource type="AudioStream" uid="uid://dm8y0m7404ha5" path="res://sfx/Skullball_goaling.wav.ogg" id="4_ywydj"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_41u45"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8fbi"]
-size = Vector2(8.485283, 8.485283)
+[sub_resource type="CircleShape2D" id="CircleShape2D_3d6a7"]
+radius = 6.000001
 
 [node name="Ball" type="CharacterBody2D"]
 script = ExtResource("1_x8fbi")
@@ -17,11 +20,20 @@ scale = Vector2(11.999999, 12)
 texture = SubResource("PlaceholderTexture2D_41u45")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2.3841858e-07)
-rotation = 0.7853982
 scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_x8fbi")
+shape = SubResource("CircleShape2D_3d6a7")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Wall_Audio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_n16w4")
-pitch_scale = 4.0
+volume_db = -4.039
+max_polyphony = 4
+script = ExtResource("3_wfynf")
+
+[node name="Paddle_Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_ywydj")
+volume_db = -8.078
+pitch_scale = 0.76
+
+[node name="Gutter_Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_3d6a7")
+pitch_scale = 0.9

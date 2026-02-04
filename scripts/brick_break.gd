@@ -3,7 +3,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	visible = false
-
-func _on_health_controller_player_lose() -> void:
-	visible = true
+	pass
+	
+func _process(_delta: float) -> void:
+	await get_tree().create_timer(5).timeout
+	queue_free()

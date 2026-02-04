@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxqypauinhsir"]
 
-[ext_resource type="Texture2D" uid="uid://bi2trmur45k6r" path="res://sprites/Paddle.png" id="1_xxgf6"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hklci"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4f30"]
 size = Vector2(70, 8)
@@ -9,7 +9,8 @@ size = Vector2(70, 8)
 collision_layer = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_xxgf6")
+scale = Vector2(70, 8)
+texture = SubResource("PlaceholderTexture2D_hklci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_y4f30")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b04ix3co6qmpw"
-path="res://.godot/imported/yuki_talksprite_placeholder.png-faf27aab389ec494115bd58db7c18735.ctex"
+uid="uid://dbio7x5hkpdn7"
+path="res://.godot/imported/r6.png-603ccf62f47488337f3f7c52ca561953.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/yuki_talksprite_placeholder.png"
-dest_files=["res://.godot/imported/yuki_talksprite_placeholder.png-faf27aab389ec494115bd58db7c18735.ctex"]
+source_file="res://sprites/Rival/r6.png"
+dest_files=["res://.godot/imported/r6.png-603ccf62f47488337f3f7c52ca561953.ctex"]
 
 [params]
 

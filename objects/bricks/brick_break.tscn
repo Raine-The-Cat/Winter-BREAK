@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhc6dljycdbkw"]
 
-[ext_resource type="Script" uid="uid://cnx8wa5sviyi5" path="res://objects/bricks/brick_break.gd" id="1_0jndn"]
+[ext_resource type="Script" uid="uid://cnx8wa5sviyi5" path="res://scripts/brick_break.gd" id="1_0jndn"]
 [ext_resource type="AudioStream" uid="uid://di12ojqr2jfhn" path="res://sfx/Destroy_object.wav.ogg" id="1_s4e2k"]
 
 [sub_resource type="Gradient" id="Gradient_0jndn"]

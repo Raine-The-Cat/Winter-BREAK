@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c468urde6rs7r"
-path="res://.godot/imported/Yukiwalk 1.png-eccc65a462c23387856a188b3242d6c6.ctex"
+uid="uid://bhsulrm7srycq"
+path="res://.godot/imported/Yukiwalk 2.png-1d68519b732cd7d34b1fb361e79fd060.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Yukiwalk 1.png"
-dest_files=["res://.godot/imported/Yukiwalk 1.png-eccc65a462c23387856a188b3242d6c6.ctex"]
+source_file="res://sprites/Yuki/Yukiwalk 2.png"
+dest_files=["res://.godot/imported/Yukiwalk 2.png-1d68519b732cd7d34b1fb361e79fd060.ctex"]
 
 [params]
 

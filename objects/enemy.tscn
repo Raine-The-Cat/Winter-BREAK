@@ -1,11 +1,51 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbnwt3wop782o"]
+[gd_scene load_steps=14 format=3 uid="uid://dbnwt3wop782o"]
 
-[ext_resource type="Texture2D" uid="uid://dlm251eufw3ba" path="res://sprites/Rival 1.png" id="1_7k104"]
 [ext_resource type="Script" uid="uid://det0t3xv7o35g" path="res://scripts/enemy.gd" id="1_41oev"]
+[ext_resource type="Texture2D" uid="uid://dyb81ktfpdabo" path="res://sprites/Rival/r1.png" id="2_dkbxi"]
 [ext_resource type="Texture2D" uid="uid://cln38pp5stg4c" path="res://sprites/rival heart 1.png" id="3_41oev"]
+[ext_resource type="Texture2D" uid="uid://p1dwra6j3l8j" path="res://sprites/Rival/r2.png" id="3_gusmx"]
+[ext_resource type="Texture2D" uid="uid://o73b3di0js51" path="res://sprites/Rival/r3.png" id="4_n7us5"]
+[ext_resource type="Texture2D" uid="uid://cvm4gdk81ioll" path="res://sprites/Rival/r4.png" id="5_nmbvr"]
+[ext_resource type="Texture2D" uid="uid://7dhicytbyfgh" path="res://sprites/Rival/r5.png" id="6_6f260"]
+[ext_resource type="Texture2D" uid="uid://dbio7x5hkpdn7" path="res://sprites/Rival/r6.png" id="7_oc44c"]
+[ext_resource type="Texture2D" uid="uid://b1hvwhl0s771a" path="res://sprites/Rival/r7.png" id="8_el3yj"]
+[ext_resource type="Texture2D" uid="uid://ciw8qjjgp7a3l" path="res://sprites/Rival/r8.png" id="9_oigae"]
+[ext_resource type="AudioStream" uid="uid://blne2sq43ach7" path="res://sfx/Porcupine_death_fall.wav.ogg" id="11_gusmx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4gyqm"]
 radius = 11.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x7oaw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dkbxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gusmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n7us5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nmbvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6f260")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oc44c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_el3yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_oigae")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="Enemy" type="StaticBody2D" groups=["Enemy"]]
 script = ExtResource("1_41oev")
@@ -14,8 +54,9 @@ script = ExtResource("1_41oev")
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_4gyqm")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_7k104")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x7oaw")
+frame_progress = 0.4517854
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -30,3 +71,7 @@ texture = ExtResource("3_41oev")
 [node name="Heart 3" type="Sprite2D" parent="Node2D"]
 position = Vector2(14, -21)
 texture = ExtResource("3_41oev")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_gusmx")
+volume_db = 7.068

@@ -50,4 +50,4 @@ offset_right = 450.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_167sa")
 
 [node name="Name" parent="Panel" index="0"]
-text = "Rival"
+text = "Val"

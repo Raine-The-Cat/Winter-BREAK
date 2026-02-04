@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c421yoo78jf2u"]
+[gd_scene load_steps=5 format=3 uid="uid://c421yoo78jf2u"]
 
 [ext_resource type="Script" uid="uid://dd4ekjayppwif" path="res://scripts/basic_brick.gd" id="1_5hej4"]
 [ext_resource type="Texture2D" uid="uid://baclx7k2vk2p2" path="res://sprites/Block3.png" id="1_6pc2g"]
+[ext_resource type="AudioStream" uid="uid://dtg8c646vaowf" path="res://sfx/Locked.wav.mp3" id="3_nl7eo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5hej4"]
 size = Vector2(40, 20)
@@ -14,3 +15,8 @@ texture = ExtResource("1_6pc2g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5hej4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nl7eo")
+volume_db = 12.116
+pitch_scale = 1.54

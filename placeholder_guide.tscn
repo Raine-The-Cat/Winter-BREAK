@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" path="res://objects/yuki.tscn" id="8_8p741"]
 [ext_resource type="PackedScene" uid="uid://c421yoo78jf2u" path="res://objects/bricks/basic_brick.tscn" id="9_s7cmc"]
 [ext_resource type="PackedScene" uid="uid://dbnwt3wop782o" path="res://objects/enemy.tscn" id="10_8s3r2"]
-[ext_resource type="PackedScene" uid="uid://cqlgtaabi51fy" path="res://objects/vn parts/visual_novel_base.tscn" id="11_rxby0"]
 [ext_resource type="Texture2D" uid="uid://cawyfb35cgafr" path="res://sprites/Game_Mockup.png" id="11_wubcf"]
+[ext_resource type="PackedScene" uid="uid://dcmt0qbpcpdmd" path="res://objects/bricks/tough_brick.tscn" id="12_rxby0"]
 
 [node name="placeholder guide" type="Node2D"]
 
@@ -75,12 +75,13 @@ position = Vector2(334, 102)
 [node name="Enemy" parent="." instance=ExtResource("10_8s3r2")]
 position = Vector2(303, 55)
 
-[node name="Conversation Base" parent="." instance=ExtResource("11_rxby0")]
-
 [node name="GameMockup" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(320, 180)
 texture = ExtResource("11_wubcf")
+
+[node name="Tough Brick" parent="." instance=ExtResource("12_rxby0")]
+position = Vector2(300, 126)
 
 [connection signal="brick_check" from="Ball" to="State controller" method="_on_ball_brick_check"]
 [connection signal="gutterball" from="Death Barrier" to="Ball" method="_on_death_barrier_gutterball"]

@@ -4,12 +4,15 @@ var health = 3
 @onready var heart_1 = get_node("Heart1")
 @onready var heart_2 = get_node("Heart2")
 @onready var heart_3 = get_node("Heart3")
+@onready var yuki = get_node("../Yuki")
+@onready var ball = get_node("../Ball")
+var wincon = preload("res://objects/vn parts/Win Conversation.tscn")
 
 signal player_lose
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 	
 func _input(press):
 	if health == -1 and press.is_action_pressed("ui_accept"):
@@ -18,7 +21,7 @@ func _input(press):
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 #This is bad code, but it will work
@@ -43,6 +46,12 @@ func _on_ball_brick_check() -> void:
 		
 func _level_win():
 	print("wniner winner chickkkkkkkdiner")
+	ball.visible = false
+	ball.process_mode = Node.PROCESS_MODE_DISABLED
+	yuki.process_mode = Node.PROCESS_MODE_DISABLED
+	var scene = wincon.instantiate()
+	get_parent().add_child(scene)
+	
 
 
 func _on_enemy_defeat() -> void:
