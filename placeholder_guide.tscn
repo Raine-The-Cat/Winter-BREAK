@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://huvwyi8om0qs"]
+[gd_scene load_steps=15 format=3 uid="uid://huvwyi8om0qs"]
 
 [ext_resource type="Texture2D" uid="uid://4fch32vyb0fy" path="res://sprites/GAME_MOCKUP4.png" id="1_rxby0"]
 [ext_resource type="PackedScene" uid="uid://xsxjx4f3g3j0" path="res://objects/paddle.tscn" id="2_802g3"]
+[ext_resource type="Texture2D" uid="uid://3op8dpl2n3ia" path="res://sprites/winterbreak_bg_level.png" id="2_nxf37"]
 [ext_resource type="PackedScene" uid="uid://dxqypauinhsir" path="res://objects/wall.tscn" id="3_est07"]
 [ext_resource type="PackedScene" uid="uid://c5vhmop754rei" path="res://objects/ball.tscn" id="4_n4ci1"]
 [ext_resource type="PackedScene" uid="uid://bymdi7pambjjt" path="res://objects/death_barrier.tscn" id="5_errgl"]
@@ -19,6 +20,10 @@
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(320, 180)
 texture = ExtResource("1_rxby0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+texture = ExtResource("2_nxf37")
 
 [node name="Paddle" parent="." instance=ExtResource("2_802g3")]
 unique_name_in_owner = true
@@ -59,7 +64,7 @@ visible = false
 z_index = 1
 
 [node name="State controller" parent="." instance=ExtResource("6_3igo1")]
-position = Vector2(462, 333)
+position = Vector2(452, 334)
 
 [node name="Yuki" parent="." instance=ExtResource("8_8p741")]
 position = Vector2(312, 283)
@@ -128,6 +133,10 @@ position = Vector2(320, 180)
 texture = ExtResource("11_wubcf")
 
 [node name="start_conversation" parent="." instance=ExtResource("13_6i06i")]
+offset_left = -1.0
+offset_top = -4.0
+offset_right = -1.0
+offset_bottom = -4.0
 
 [connection signal="brick_check" from="Ball" to="State controller" method="_on_ball_brick_check"]
 [connection signal="gutterball" from="Death Barrier" to="Ball" method="_on_death_barrier_gutterball"]

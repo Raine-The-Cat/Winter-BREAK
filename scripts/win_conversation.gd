@@ -1,5 +1,6 @@
 extends Conversation
 
+const ending = preload("res://objects/vn parts/ending_sequence.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -31,5 +32,6 @@ func _ready() -> void:
 	y.move(%Off_Right)
 	await y.say("See you later, better luck next year.")
 	
-	
+	var end = ending.instantiate()
+	add_child(end)
 	

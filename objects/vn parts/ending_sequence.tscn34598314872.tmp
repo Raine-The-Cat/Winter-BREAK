@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://dx2bfwwcq4xdp"]
+
+[ext_resource type="Script" uid="uid://l02bbykb640g" path="res://ending_sequence.gd" id="1_00ji8"]
+[ext_resource type="Texture2D" uid="uid://ope5wghawktg" path="res://sprites/end_cg1.png" id="2_4lkbp"]
+[ext_resource type="Texture2D" uid="uid://ddxjrh3wrvkqp" path="res://sprites/end_cg2.png" id="3_7j2cx"]
+[ext_resource type="Texture2D" uid="uid://dbe24m7f8lqus" path="res://sprites/end_cg3.png" id="4_yyj2t"]
+[ext_resource type="Texture2D" uid="uid://cwjhnawq73nw0" path="res://sprites/end_cg4.png" id="5_7j4wo"]
+[ext_resource type="Texture2D" uid="uid://cpxguutfps812" path="res://sprites/end_cg5.png" id="6_7j2cx"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_66oej"]
+
+[node name="Ending sequence" type="Node2D"]
+script = ExtResource("1_00ji8")
+
+[node name="Black" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+position = Vector2(320.25, 180.75)
+scale = Vector2(641.5, 362.5)
+texture = SubResource("CanvasTexture_66oej")
+
+[node name="Scene 1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320, 180)
+texture = ExtResource("2_4lkbp")
+
+[node name="Scene 2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320, 180)
+texture = ExtResource("3_7j2cx")
+
+[node name="Scene 3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320, 180)
+texture = ExtResource("4_yyj2t")
+
+[node name="Scene 4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320, 180)
+texture = ExtResource("5_7j4wo")
+
+[node name="Scene 5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(320, 180)
+texture = ExtResource("6_7j2cx")
