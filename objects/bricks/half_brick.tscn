@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cta03sxdw1rib"]
+
+[ext_resource type="PackedScene" uid="uid://c421yoo78jf2u" path="res://objects/bricks/basic_brick.tscn" id="1_utvsq"]
+[ext_resource type="Texture2D" uid="uid://wsa6l5080x0j" path="res://sprites/winterbreak_spr_brick2.png" id="2_5pfll"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_utvsq"]
+
+[node name="Basic Brick" instance=ExtResource("1_utvsq")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_5pfll")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_utvsq")

@@ -5,7 +5,7 @@ var health = max_health
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Sprite2D.modulate = Color(0, 0, 1)
+	$Sprite2D.modulate = Color(.5, .5, 1)
 
 
 func _break():
@@ -19,5 +19,5 @@ func _break():
 		health -= 1
 		print((max_health - health) / max_health, (max_health - health) / max_health, 1)
 		get_node("AudioStreamPlayer2D").play()
-		$Sprite2D.modulate = Color((max_health - health) / max_health, (max_health - health) / max_health, 1)
+		$Sprite2D.modulate = Color(((max_health - health) / max_health) / 2 + .5, ((max_health - health) / max_health) / 2 + .5, 1)
 		

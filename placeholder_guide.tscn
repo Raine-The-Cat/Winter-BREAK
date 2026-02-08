@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://huvwyi8om0qs"]
+[gd_scene load_steps=16 format=3 uid="uid://huvwyi8om0qs"]
 
 [ext_resource type="Texture2D" uid="uid://4fch32vyb0fy" path="res://sprites/GAME_MOCKUP4.png" id="1_rxby0"]
 [ext_resource type="PackedScene" uid="uid://xsxjx4f3g3j0" path="res://objects/paddle.tscn" id="2_802g3"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cawyfb35cgafr" path="res://sprites/Game_Mockup.png" id="11_wubcf"]
 [ext_resource type="PackedScene" uid="uid://dcmt0qbpcpdmd" path="res://objects/bricks/tough_brick.tscn" id="12_rxby0"]
 [ext_resource type="PackedScene" uid="uid://b7o4k5o3bs7f1" path="res://objects/vn parts/start_conversation.tscn" id="13_6i06i"]
+[ext_resource type="PackedScene" uid="uid://cta03sxdw1rib" path="res://objects/bricks/half_brick.tscn" id="13_n5v71"]
 
 [node name="placeholder guide" type="Node2D"]
 
@@ -27,7 +28,7 @@ texture = ExtResource("2_nxf37")
 
 [node name="Paddle" parent="." instance=ExtResource("2_802g3")]
 unique_name_in_owner = true
-position = Vector2(311, 263)
+position = Vector2(319, 272)
 yuki_distance = 19
 
 [node name="Wall" parent="." instance=ExtResource("3_est07")]
@@ -53,7 +54,7 @@ scale = Vector2(5, 1)
 collision_mask = 3
 
 [node name="Ball" parent="." instance=ExtResource("4_n4ci1")]
-position = Vector2(311, 251)
+position = Vector2(319, 261)
 
 [node name="Death Barrier" parent="." instance=ExtResource("5_errgl")]
 position = Vector2(320, 314)
@@ -67,70 +68,239 @@ z_index = 1
 position = Vector2(452, 334)
 
 [node name="Yuki" parent="." instance=ExtResource("8_8p741")]
-position = Vector2(312, 283)
+position = Vector2(320, 292)
 collision_layer = 2
 collision_mask = 2
-
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(255, 76)
-
-[node name="Basic Brick" parent="Node2D" instance=ExtResource("9_s7cmc")]
-
-[node name="Basic Brick2" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(93, 0)
-
-[node name="Tough Brick" parent="Node2D" instance=ExtResource("12_rxby0")]
-position = Vector2(107, 71)
-
-[node name="Tough Brick2" parent="Node2D" instance=ExtResource("12_rxby0")]
-position = Vector2(0, 45)
-
-[node name="Tough Brick3" parent="Node2D" instance=ExtResource("12_rxby0")]
-position = Vector2(107, 46)
-
-[node name="Basic Brick3" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(123, 23)
-
-[node name="Basic Brick4" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(-24, 23)
-
-[node name="Basic Brick5" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(136, 0)
-
-[node name="Tough Brick4" parent="Node2D" instance=ExtResource("12_rxby0")]
-position = Vector2(106, 96)
-
-[node name="Tough Brick5" parent="Node2D" instance=ExtResource("12_rxby0")]
-position = Vector2(-1, 97)
-
-[node name="Basic Brick6" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(-45, 0)
-
-[node name="Basic Brick7" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(-92, -1)
-
-[node name="Basic Brick8" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(182, 0)
-
-[node name="Basic Brick9" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(-68, 23)
-
-[node name="Basic Brick10" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(-114, 23)
-
-[node name="Basic Brick11" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(165, 23)
-
-[node name="Basic Brick12" parent="Node2D" instance=ExtResource("9_s7cmc")]
-position = Vector2(208, 23)
-
-[node name="Enemy" parent="." instance=ExtResource("10_8s3r2")]
-position = Vector2(303, 37)
 
 [node name="GameMockup" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(320, 180)
 texture = ExtResource("11_wubcf")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(255, 55)
+
+[node name="Basic Brick" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-16, 38)
+
+[node name="Basic Brick2" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(164, 18)
+
+[node name="Tough Brick" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(84, 18)
+
+[node name="Tough Brick2" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(24, 38)
+
+[node name="Tough Brick3" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(44, 18)
+
+[node name="Basic Brick3" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(184, 38)
+
+[node name="Basic Brick4" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-56, 38)
+
+[node name="Basic Brick5" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(244, 18)
+
+[node name="Tough Brick4" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(64, 38)
+
+[node name="Tough Brick5" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(44, 58)
+
+[node name="Basic Brick6" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-36, 18)
+
+[node name="Basic Brick7" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-116, 18)
+
+[node name="Basic Brick8" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(224, 38)
+
+[node name="Basic Brick9" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-76, 18)
+
+[node name="Basic Brick10" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-96, 38)
+
+[node name="Basic Brick11" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(204, 18)
+
+[node name="Basic Brick12" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(244, 58)
+
+[node name="Basic Brick13" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(4, 58)
+
+[node name="Basic Brick14" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(144, 38)
+
+[node name="Basic Brick15" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(24, 78)
+
+[node name="Tough Brick6" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(4, 18)
+
+[node name="Tough Brick7" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(124, 18)
+
+[node name="Tough Brick8" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(84, 58)
+
+[node name="Tough Brick9" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(104, 38)
+
+[node name="Tough Brick10" parent="Node2D" instance=ExtResource("12_rxby0")]
+position = Vector2(64, 78)
+
+[node name="Basic Brick16" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-116, 58)
+
+[node name="Basic Brick17" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-76, 58)
+
+[node name="Basic Brick18" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-36, 58)
+
+[node name="Basic Brick19" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(124, 58)
+
+[node name="Basic Brick20" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(164, 58)
+
+[node name="Basic Brick21" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(204, 58)
+
+[node name="Basic Brick22" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-96, 78)
+
+[node name="Basic Brick23" parent="Node2D" instance=ExtResource("13_n5v71")]
+position = Vector2(-126, 38)
+
+[node name="Basic Brick24" parent="Node2D" instance=ExtResource("13_n5v71")]
+position = Vector2(-126, 78)
+
+[node name="Basic Brick25" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-56, 78)
+
+[node name="Basic Brick26" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-16, 78)
+
+[node name="Basic Brick27" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(104, 78)
+
+[node name="Basic Brick28" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(144, 78)
+
+[node name="Basic Brick29" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(184, 78)
+
+[node name="Basic Brick30" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(224, 78)
+
+[node name="Basic Brick31" parent="Node2D" instance=ExtResource("13_n5v71")]
+position = Vector2(254, 78)
+
+[node name="Basic Brick32" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-116, 98)
+
+[node name="Basic Brick33" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-76, 98)
+
+[node name="Basic Brick34" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-36, 98)
+
+[node name="Basic Brick35" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(4, 98)
+
+[node name="Basic Brick36" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(84, 98)
+
+[node name="Basic Brick37" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(124, 98)
+
+[node name="Basic Brick38" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(164, 98)
+
+[node name="Basic Brick39" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(204, 98)
+
+[node name="Basic Brick40" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(244, 98)
+
+[node name="Basic Brick41" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-96, 118)
+
+[node name="Basic Brick42" parent="Node2D" instance=ExtResource("13_n5v71")]
+position = Vector2(-126, 118)
+
+[node name="Basic Brick43" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-56, 118)
+
+[node name="Basic Brick44" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-16, 118)
+
+[node name="Basic Brick45" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(24, 118)
+
+[node name="Basic Brick46" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(64, 118)
+
+[node name="Basic Brick47" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(104, 118)
+
+[node name="Basic Brick48" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(144, 118)
+
+[node name="Basic Brick49" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(184, 118)
+
+[node name="Basic Brick50" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(224, 118)
+
+[node name="Basic Brick51" parent="Node2D" instance=ExtResource("13_n5v71")]
+position = Vector2(254, 118)
+
+[node name="Basic Brick52" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-116, 138)
+
+[node name="Basic Brick53" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-76, 138)
+
+[node name="Basic Brick54" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-36, 138)
+
+[node name="Basic Brick55" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(4, 138)
+
+[node name="Basic Brick56" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(44, 138)
+
+[node name="Basic Brick57" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(84, 138)
+
+[node name="Basic Brick58" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(124, 138)
+
+[node name="Basic Brick59" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(164, 138)
+
+[node name="Basic Brick60" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(204, 138)
+
+[node name="Basic Brick62" parent="Node2D" instance=ExtResource("13_n5v71")]
+position = Vector2(254, 38)
+
+[node name="Basic Brick61" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(244, 138)
+
+[node name="Basic Brick63" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(44, 98)
+
+[node name="Enemy" parent="." instance=ExtResource("10_8s3r2")]
+position = Vector2(319, 41)
 
 [node name="start_conversation" parent="." instance=ExtResource("13_6i06i")]
 offset_left = -1.0
