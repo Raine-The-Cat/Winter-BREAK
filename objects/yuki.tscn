@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bff4k5t1oe1a6"]
+[gd_scene load_steps=6 format=3 uid="uid://ddsqhuw5h3ybn"]
 
-[ext_resource type="Texture2D" uid="uid://c468urde6rs7r" path="res://sprites/Yukiwalk 1.png" id="1_e0g84"]
+[ext_resource type="Texture2D" uid="uid://c468urde6rs7r" path="res://sprites/Yuki/Yukiwalk 1.png" id="1_e0g84"]
 [ext_resource type="Script" uid="uid://b7skvbs2ps3rh" path="res://scripts/yuki.gd" id="1_voa4e"]
-[ext_resource type="Texture2D" uid="uid://bhsulrm7srycq" path="res://sprites/Yukiwalk 2.png" id="2_voa4e"]
+[ext_resource type="Texture2D" uid="uid://bhsulrm7srycq" path="res://sprites/Yuki/Yukiwalk 2.png" id="2_voa4e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_34c8e"]
 animations = [{

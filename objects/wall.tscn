@@ -9,6 +9,7 @@ size = Vector2(70, 8)
 collision_layer = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(70, 8)
 texture = SubResource("PlaceholderTexture2D_hklci")
 

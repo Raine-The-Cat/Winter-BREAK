@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bt06ngbng2p2" path="res://scripts/snowball_breaking.gd" id="1_fdvho"]
 
 [node name="Snowball breaking" type="CPUParticles2D"]
+z_index = 1
 emitting = false
 amount = 40
 lifetime = 0.25

@@ -15,7 +15,7 @@ func _ready() -> void:
 	pass
 	
 func _input(press):
-	if health == -1 and press.is_action_pressed("ui_accept"):
+	if health == -1 and (press.is_action_pressed("ui_accept") or press is InputEventMouseButton):
 		get_tree().reload_current_scene()
 		
 

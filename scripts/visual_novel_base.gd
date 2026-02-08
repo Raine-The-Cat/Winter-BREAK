@@ -2,6 +2,7 @@ class_name Conversation extends ReferenceRect
 
 const YUKI = preload("res://objects/vn parts/talksprite_yuki.tscn")
 const RIVAL = preload("res://objects/vn parts/talksprite_rival.tscn")
+const SNOW = preload("res://objects/vn parts/snowball_talksprite.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

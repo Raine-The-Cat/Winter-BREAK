@@ -8,11 +8,11 @@ extends CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	process_mode = Node.PROCESS_MODE_DISABLED
 
 # Move the paddle left and right
 func get_input():
-	var input_dir := Input.get_axis("ui_left", "ui_right")
+	var input_dir := Input.get_axis("true_left", "true_right")
 	velocity.x = (input_dir * SPEED)
 	if input_dir != 0:
 		_sprite.play("walk")

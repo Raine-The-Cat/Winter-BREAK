@@ -76,6 +76,7 @@ texture = ExtResource("3_41oev")
 [node name="Hit noise" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_gusmx")
 volume_db = 7.068
+pitch_scale = 0.89
 
 [node name="Death noise" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_n7us5")

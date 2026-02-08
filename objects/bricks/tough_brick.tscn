@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcmt0qbpcpdmd"]
 
 [ext_resource type="PackedScene" uid="uid://c421yoo78jf2u" path="res://objects/bricks/basic_brick.tscn" id="1_e3knx"]
-[ext_resource type="Script" uid="uid://mipbpp5l2sqg" path="res://objects/bricks/tough_brick.gd" id="2_iclv4"]
+[ext_resource type="Script" uid="uid://mipbpp5l2sqg" path="res://scripts/tough_brick.gd" id="2_iclv4"]
 
 [node name="Tough Brick" instance=ExtResource("1_e3knx")]
 script = ExtResource("2_iclv4")

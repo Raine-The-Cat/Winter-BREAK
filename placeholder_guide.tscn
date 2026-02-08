@@ -1,24 +1,24 @@
-[gd_scene load_steps=13 format=3 uid="uid://huvwyi8om0qs"]
+[gd_scene load_steps=14 format=3 uid="uid://huvwyi8om0qs"]
 
-[ext_resource type="Texture2D" uid="uid://cfbkmnwefsvdc" path="res://sprites/image.png" id="1_iy0fm"]
+[ext_resource type="Texture2D" uid="uid://4fch32vyb0fy" path="res://sprites/GAME_MOCKUP4.png" id="1_rxby0"]
 [ext_resource type="PackedScene" uid="uid://xsxjx4f3g3j0" path="res://objects/paddle.tscn" id="2_802g3"]
 [ext_resource type="PackedScene" uid="uid://dxqypauinhsir" path="res://objects/wall.tscn" id="3_est07"]
 [ext_resource type="PackedScene" uid="uid://c5vhmop754rei" path="res://objects/ball.tscn" id="4_n4ci1"]
 [ext_resource type="PackedScene" uid="uid://bymdi7pambjjt" path="res://objects/death_barrier.tscn" id="5_errgl"]
 [ext_resource type="PackedScene" uid="uid://t7r02ng380ma" path="res://objects/state_controller.tscn" id="6_3igo1"]
-[ext_resource type="PackedScene" path="res://objects/death_screen.tscn" id="7_dniw8"]
-[ext_resource type="PackedScene" path="res://objects/yuki.tscn" id="8_8p741"]
+[ext_resource type="PackedScene" uid="uid://6pm6cw6k6sh" path="res://objects/death_screen.tscn" id="7_dniw8"]
+[ext_resource type="PackedScene" uid="uid://ddsqhuw5h3ybn" path="res://objects/yuki.tscn" id="8_8p741"]
 [ext_resource type="PackedScene" uid="uid://c421yoo78jf2u" path="res://objects/bricks/basic_brick.tscn" id="9_s7cmc"]
 [ext_resource type="PackedScene" uid="uid://dbnwt3wop782o" path="res://objects/enemy.tscn" id="10_8s3r2"]
 [ext_resource type="Texture2D" uid="uid://cawyfb35cgafr" path="res://sprites/Game_Mockup.png" id="11_wubcf"]
 [ext_resource type="PackedScene" uid="uid://dcmt0qbpcpdmd" path="res://objects/bricks/tough_brick.tscn" id="12_rxby0"]
+[ext_resource type="PackedScene" uid="uid://b7o4k5o3bs7f1" path="res://objects/vn parts/start_conversation.tscn" id="13_6i06i"]
 
 [node name="placeholder guide" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(319, 178)
-scale = Vector2(1.0901837, 1.0607959)
-texture = ExtResource("1_iy0fm")
+position = Vector2(320, 180)
+texture = ExtResource("1_rxby0")
 
 [node name="Paddle" parent="." instance=ExtResource("2_802g3")]
 unique_name_in_owner = true
@@ -26,32 +26,32 @@ position = Vector2(311, 263)
 yuki_distance = 19
 
 [node name="Wall" parent="." instance=ExtResource("3_est07")]
-position = Vector2(489, 165)
+position = Vector2(524, 162)
 rotation = 1.5707964
 scale = Vector2(5, 1)
 collision_mask = 3
 
 [node name="Wall2" parent="." instance=ExtResource("3_est07")]
-position = Vector2(309, 307)
+position = Vector2(313, 312)
 scale = Vector2(6, 1)
 collision_mask = 3
 
 [node name="Wall3" parent="." instance=ExtResource("3_est07")]
-position = Vector2(305, 12)
+position = Vector2(317, 4)
 scale = Vector2(6, 1)
 collision_mask = 3
 
 [node name="Wall4" parent="." instance=ExtResource("3_est07")]
-position = Vector2(115, 161.00002)
+position = Vector2(116, 161)
 rotation = 1.5707964
 scale = Vector2(5, 1)
 collision_mask = 3
 
 [node name="Ball" parent="." instance=ExtResource("4_n4ci1")]
-position = Vector2(311, 244)
+position = Vector2(311, 251)
 
 [node name="Death Barrier" parent="." instance=ExtResource("5_errgl")]
-position = Vector2(306, 309)
+position = Vector2(320, 314)
 scale = Vector2(20, 1)
 
 [node name="Death screen" parent="." instance=ExtResource("7_dniw8")]
@@ -59,7 +59,7 @@ visible = false
 z_index = 1
 
 [node name="State controller" parent="." instance=ExtResource("6_3igo1")]
-position = Vector2(422, 330)
+position = Vector2(462, 333)
 
 [node name="Yuki" parent="." instance=ExtResource("8_8p741")]
 position = Vector2(312, 283)
@@ -67,7 +67,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(255, 88)
+position = Vector2(255, 76)
 
 [node name="Basic Brick" parent="Node2D" instance=ExtResource("9_s7cmc")]
 
@@ -98,34 +98,36 @@ position = Vector2(106, 96)
 [node name="Tough Brick5" parent="Node2D" instance=ExtResource("12_rxby0")]
 position = Vector2(-1, 97)
 
+[node name="Basic Brick6" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-45, 0)
+
+[node name="Basic Brick7" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-92, -1)
+
+[node name="Basic Brick8" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(182, 0)
+
+[node name="Basic Brick9" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-68, 23)
+
+[node name="Basic Brick10" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(-114, 23)
+
+[node name="Basic Brick11" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(165, 23)
+
+[node name="Basic Brick12" parent="Node2D" instance=ExtResource("9_s7cmc")]
+position = Vector2(208, 23)
+
 [node name="Enemy" parent="." instance=ExtResource("10_8s3r2")]
-position = Vector2(303, 50)
+position = Vector2(303, 37)
 
 [node name="GameMockup" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(320, 180)
 texture = ExtResource("11_wubcf")
 
-[node name="Basic Brick" parent="." instance=ExtResource("9_s7cmc")]
-position = Vector2(210, 88)
-
-[node name="Basic Brick2" parent="." instance=ExtResource("9_s7cmc")]
-position = Vector2(163, 87)
-
-[node name="Basic Brick3" parent="." instance=ExtResource("9_s7cmc")]
-position = Vector2(437, 88)
-
-[node name="Basic Brick4" parent="." instance=ExtResource("9_s7cmc")]
-position = Vector2(187, 111)
-
-[node name="Basic Brick5" parent="." instance=ExtResource("9_s7cmc")]
-position = Vector2(141, 111)
-
-[node name="Basic Brick6" parent="." instance=ExtResource("9_s7cmc")]
-position = Vector2(420, 111)
-
-[node name="Basic Brick7" parent="." instance=ExtResource("9_s7cmc")]
-position = Vector2(463, 111)
+[node name="start_conversation" parent="." instance=ExtResource("13_6i06i")]
 
 [connection signal="brick_check" from="Ball" to="State controller" method="_on_ball_brick_check"]
 [connection signal="gutterball" from="Death Barrier" to="Ball" method="_on_death_barrier_gutterball"]

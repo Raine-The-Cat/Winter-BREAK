@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7o4k5o3bs7f1"]
+
+[ext_resource type="PackedScene" uid="uid://cqlgtaabi51fy" path="res://objects/vn parts/visual_novel_base.tscn" id="1_5bctw"]
+[ext_resource type="Script" uid="uid://onqgutht4gfn" path="res://objects/vn parts/start_conversation.gd" id="2_fs0yd"]
+
+[node name="start_conversation" instance=ExtResource("1_5bctw")]
+script = ExtResource("2_fs0yd")
+
+[node name="Center" type="ReferenceRect" parent="." index="5"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 345.0
+offset_right = 385.0
+offset_bottom = 40.0
+
+[node name="Close" type="ReferenceRect" parent="." index="6"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 232.0
+offset_right = 272.0
+offset_bottom = 40.0

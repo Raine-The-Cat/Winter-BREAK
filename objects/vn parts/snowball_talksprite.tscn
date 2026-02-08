@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqgk2nxasl0h0"]
+
+[ext_resource type="PackedScene" uid="uid://dpehi7n3rench" path="res://objects/vn parts/talksprite_base.tscn" id="1_eg1gu"]
+[ext_resource type="Script" uid="uid://cm3pivqkubjr0" path="res://scripts/snowball_talksprite.gd" id="2_yyfcc"]
+[ext_resource type="Texture2D" uid="uid://cuukrfg052jl7" path="res://sprites/snowball.png" id="3_af01p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eg1gu"]
+
+[node name="Snowball_talksprite" instance=ExtResource("1_eg1gu")]
+script = ExtResource("2_yyfcc")
+default_sprite = ExtResource("3_af01p")
+
+[node name="Snowball area" type="Area2D" parent="." index="0"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Snowball area" index="0"]
+shape = SubResource("RectangleShape2D_eg1gu")

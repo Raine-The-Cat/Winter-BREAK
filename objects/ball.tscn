@@ -2,11 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dbxfwyhng4m1a" path="res://scripts/ball.gd" id="1_x8fbi"]
 [ext_resource type="AudioStream" uid="uid://d1kshi0cfhsm" path="res://sfx/Mining_(1).wav" id="2_n16w4"]
+[ext_resource type="Texture2D" uid="uid://dq1ykcoih32sw" path="res://sprites/ball122.png" id="2_tlu46"]
 [ext_resource type="AudioStream" uid="uid://ctkmi0lgncgj3" path="res://sfx/Salamander_attack_(magic).wav.ogg" id="3_3d6a7"]
 [ext_resource type="Script" uid="uid://hach2vo4qg6t" path="res://scripts/wall_audio.gd" id="3_wfynf"]
 [ext_resource type="AudioStream" uid="uid://dm8y0m7404ha5" path="res://sfx/Skullball_goaling.wav.ogg" id="4_ywydj"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_41u45"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3d6a7"]
 radius = 6.000001
@@ -16,8 +15,7 @@ script = ExtResource("1_x8fbi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2.9802322e-07, 1.4901161e-07)
-scale = Vector2(11.999999, 12)
-texture = SubResource("PlaceholderTexture2D_41u45")
+texture = ExtResource("2_tlu46")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.9999999, 0.9999999)

@@ -14,6 +14,7 @@ signal brick_check
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print(get_path())
+	process_mode = Node.PROCESS_MODE_DISABLED
 
 #Ball launching code for the start of the level
 func _input(press):

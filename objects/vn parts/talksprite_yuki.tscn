@@ -1,5 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://di636fl8cqmid"]
+[gd_scene load_steps=6 format=3 uid="uid://di636fl8cqmid"]
 
 [ext_resource type="PackedScene" uid="uid://dpehi7n3rench" path="res://objects/vn parts/talksprite_base.tscn" id="1_lm5st"]
+[ext_resource type="Texture2D" uid="uid://cwbe4mxuiv52j" path="res://sprites/Yuki/yuki_neutral.png" id="2_rh06v"]
+[ext_resource type="Texture2D" uid="uid://byppophfiv0fl" path="res://sprites/Yuki/yuki_shieldless.png" id="3_wtcrn"]
+[ext_resource type="Texture2D" uid="uid://c65c3kaq715qf" path="res://sprites/Yuki/yuki_exasperated.png" id="4_i8mf0"]
+[ext_resource type="Texture2D" uid="uid://bt3dss8sxu3cr" path="res://sprites/Yuki/yuki_block.png" id="5_7u2ro"]
 
 [node name="Talksprite Yuki" instance=ExtResource("1_lm5st")]
+default_sprite = ExtResource("2_rh06v")
+tagged_sprites = Dictionary[String, Texture2D]({
+"block": ExtResource("5_7u2ro"),
+"shieldless": ExtResource("3_wtcrn"),
+"tired": ExtResource("4_i8mf0")
+})
